@@ -10,7 +10,7 @@ api_hash = "מחקתי"
 
 with TelegramClient("my_session", api_id, api_hash) as client:
 
-    channel = client.get_entity("ynet")
+    channel = client.get_entity("@ynetalerts")
     messages = client.get_messages(channel, limit=100)
 
     all_my_messages = []
@@ -32,3 +32,4 @@ with TelegramClient("my_session", api_id, api_hash) as client:
 
 with open("osint.json", "w", encoding="utf-8") as f:
     json.dump(all_my_messages, f, ensure_ascii=False, indent=2)
+
